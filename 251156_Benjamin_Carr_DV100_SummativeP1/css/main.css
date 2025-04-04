@@ -1,0 +1,849 @@
+@font-face {
+    font-family: 'Porter Sans Block';
+    src: url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.woff') format('woff'),
+         url('../assets/fonts/porter_sans_block/porter-sans-inline-block-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #45016d;
+    color: #ffffff;
+    font-size: 18px;
+    overflow-x: hidden;
+  }
+
+  img{
+    max-width: 100%;
+    display: block;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+
+  #siteHeader{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 20px 0;
+}
+
+.headerWrapper{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 50px;
+    padding: 12px 30px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoContainer{
+    flex: 1;
+}
+
+.logoImage{
+    height: 48px;
+}
+
+.navLinks{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.navLinks ul{
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navLinks a.active,
+.navLinks a:hover{
+    color: #e51728;
+    font-weight: 600;
+}
+
+.searchCart{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchBoxWrapper{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.searchInput{
+    border: none;
+    outline: none;
+    padding: 4px 10px;
+    font-size: 14px;
+    background: transparent;
+    width: 140px;
+}
+
+.cartContainer{
+    position: relative;
+    margin-left: 10px;
+}
+
+.cartIcon{
+    font-size: 20px;
+}
+
+.cartBadge{
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background-color: #e51728;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#heroSection{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heroImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroText{
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    text-align: left;
+}
+
+.heroText h1{
+    font-family: 'Porter Sans Block', sans-serif;
+    font-size: 56px;
+    color: #e51728;
+    line-height: 1;
+}
+
+.heroText p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #45016d;
+    margin-top: 10px;
+}
+
+#featuredTrip{
+  background-color: #45016d;
+  color: white;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.featuredContent{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.tripImage{
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.tripImage img:first-child{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow-left{
+  left: 10px;
+}
+
+.arrow-right{
+  right: 10px;
+}
+
+.tripText{
+  flex: 1;
+  min-width: 300px;
+}
+
+.tripText h4{
+  color: #55daeb;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tripText h2{
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.tripText p{
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.primaryButton{
+  background-color: #e51728;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primaryButton:hover{
+  background-color: #cf3e2e;
+}  
+
+#shuttleSection{
+  background-color: #ffffff;
+  color: #45016d;
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.shuttleContent{
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+}
+
+.shuttleText{
+  flex: 1;
+  min-width: 300px;
+}
+
+.shuttleText h5{
+  color: #55daeb;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.shuttleText h2{
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.shuttleText p{
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.shuttleImage{
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.shuttleImage img{
+  width: 100%;
+  border-radius: 20px;
+}  
+
+#upcomingTrips{
+  padding: 80px 40px;
+  text-align: center;
+  background-color: #45016d;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.upcomingContent h5{
+  color: #55daeb;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.upcomingContent h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 50px;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.tripCards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.tripCard{
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 16px;
+  width: 240px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tripCard img{
+  width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+}
+
+.tripCard h3{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 8px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.tripCard p{
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.buttonWrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.primaryButton{
+  background-color: #e51728;
+  color: #ffffff;
+  border: none;
+  width: 270px;
+  height: 70px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.primaryButton:hover{
+  background-color: #c70f65;
+}
+
+#siteFooter{
+  background-color: #ffffff;
+  color: #000000;
+  padding: 60px 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footerContent{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.footerLeft img{
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footerLeft p{
+  max-width: 240px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footerLinks h4,
+.footerSocial h4{
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footerLinks ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks ul li{
+  margin-bottom: 10px;
+}
+
+.footerLinks ul li a{
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s;
+}
+
+.footerLinks ul li a:hover{
+  color: #e51728;
+}
+
+.footerSocial .socialIcons{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footerSocial .socialIcons a img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+#flightsHero{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#flightsHero .heroImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#flightsHero .pageTitle{
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Porter Sans Block', sans-serif;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.flightsBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #32014e;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filterControls,
+.sortControls{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.filterButton{
+  background-color: #e51728;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.resultsCount{
+  font-size: 16px;
+}
+
+.sortControls label{
+  margin-right: 5px;
+}
+
+.sortControls select{
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.flightCard{
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  padding: 60px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.flightImage img{
+  border-radius: 20px;
+  width: 320px;
+  height: auto;
+}
+
+.flightInfo h2{
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.pricing{
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.newPrice{
+  color: #999;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.oldPrice{
+  color: #999;
+  text-decoration: line-through;
+}
+
+.rating{
+  color: #f5c518;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.reviews{
+  color: #999;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.description{
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.bookingActions{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity button{
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #45016d;
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.quantity span{
+  padding: 0 10px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.primaryButton{
+  background-color: #e51728;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tripMeta{
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  list-style: none;
+  padding-left: 0;
+}
+
+.newPrice2{
+  color:#55daeb;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.flightInfo h3{
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.description2{
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.divider{
+  width: 100%;
+  border: none;
+  border-top: 1px solid #666;
+  margin: 30px 0;
+}
+
+#contactHero{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#contactHero .heroImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#contactHero .pageTitle{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Porter Sans Block', sans-serif;
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+}
+
+body.contactPage{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+body.contactPage header{
+  background-color: #45016d;
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+body.contactPage header h1{
+  font-family: 'Porter Sans Block', sans-serif;
+  font-size: 48px;
+  margin: 0;
+  color: #ffffff;
+}
+
+body.contactPage .contactContent{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+body.contactPage .contactLeft,
+  body.contactPage .contactRight{
+    flex: 1 1 500px;
+  }
+
+  body.contactPage .contactLeft h4{
+    color: #55daeb;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  body.contactPage .contactLeft h2{
+    color: #45016d;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  body.contactPage .contactLeft p{
+    line-height: 1.8;
+    font-size: 16px;
+    color: #666;
+  }
+
+  body.contactPage .contactImage{
+    border-radius: 20px;
+    max-width: 100%;
+  }
+
+  body.contactPage .bottomContactSection{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  body.contactPage .leftColumn,
+  body.contactPage .rightColumn {
+    flex: 1 1 500px;
+  }
+
+  body.contactPage .socialMediaSection h4,
+  body.contactPage .locationSection h4{
+    color: #55daeb;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  body.contactPage .socialMediaSection h2,
+  body.contactPage .locationSection h2{
+    color: #45016d;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  body.contactPage .socialIcons{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  body.contactPage .socialIcons img{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+
+  body.contactPage .locationMap{
+    width: 100%;
+    border-radius: 16px;
+    height: 300px;
+    border: 0;
+  }
+
+  body.contactPage .contactFormWrapper{
+    background-image: url('../assets/img/formBack.png');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+  body.contactPage .contactForm{
+    color: #ffffff;
+  }
+
+  body.contactPage .contactForm h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  body.contactPage .contactForm input,
+  body.contactPage .contactForm textarea{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    color: #666;
+  }
+
+  body.contactPage .contactForm button{
+    background-color: #e51728;
+    border: none;
+    color: #ffffff;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  body.contactPage footer{
+    background: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #000000;
+    font-size: 14px;
+  }
+
+  body.contactPage .footerColumn{
+    margin: 10px 0;
+  }
